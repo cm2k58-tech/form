@@ -1,0 +1,267 @@
+<html>
+    <head>
+        <title>Registration Form</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    <style>
+        *
+        {
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            scroll-behavior:smooth;
+            font-family: Century Gothic;
+        }
+
+        body
+        {
+            background:#0f172a;
+            color:rgb(176, 171, 171);
+            overflow-x:hidden;
+        }
+
+        .grid-bg
+        {
+            position:fixed;
+            width:100%;
+            height:100%;
+            background-image:
+            linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),
+            linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px);
+            background-size:50px 50px;
+            z-index:-1;
+        }
+
+        .registeration
+        {
+            background: linear-gradient(90deg,rgba(194, 202, 207, 0.928) 0%, rgba(166, 172, 168, 0.991) 50%, rgba(175, 174, 171, 0.979) 100%);
+            color: #0f172a;
+            padding: 20px;
+            width: 50%;
+            height: 730px;
+            margin: 40px auto;
+            border-radius: 30px;
+            text-align: center;
+        }
+
+        .registeration h1
+        {
+            font-size: 35px;
+            font-family: Gadugi;
+            text-align: center;
+            padding-top: 0px;
+            padding-bottom: 15px;
+            color: #0f172a;
+            text-shadow: 2px 2px 2px  rgba(17, 28, 35, 0.24);
+            animation: fadeIn 3s ease forwards,
+                       float 2s ease-in-out 2s;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-8px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        span
+        {
+            display:inline-block;
+            transition: all 03s ease;
+        }
+
+        .registeration h1 span:hover
+        {
+            color: rgb(53, 36, 21);
+            text-shadow: 2px 2px 2px  #2e1f1678;
+            transform: scale(1.05);
+        }
+
+        input, select, textarea 
+        {
+            width: 65%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 10px;
+            background:#0f172ad6;
+            color: #ccc;
+            outline: none;
+            transition: 0.3s;
+            border: none;
+            resize: none;
+            border-bottom: 3px solid #091229ed;
+        }
+
+        input::placeholder ,
+        textarea::placeholder
+        {
+            color: #ccc;
+        }
+
+        .language input
+        {
+            width: 10px;
+            margin: 10px 40px;
+        }
+
+        .language 
+        {
+            text-align: left;
+            width: 65%;
+            font-size: 13px;
+            padding: 10px;
+            margin: 10px auto;
+            border-radius: 10px;
+            background:#0f172ad6;
+            color: #ccc;
+            outline: none;
+            transition: 0.3s;
+            border: none;
+            resize: none;
+            border-bottom: 2px solid #091229ed;
+        }
+
+        input[type="radio"] 
+        {
+            margin-right: 5px;
+        }
+      
+        .button 
+        {
+            display: flex;
+            gap: 80px;
+            margin: 40px;
+            justify-content: center;
+        }
+
+        button 
+        {
+            width: 28%;
+            padding: 15px;
+            border-radius: 20px;
+            border: none;
+            font-weight: normal;
+            cursor: pointer;
+            transition: 0.3s;
+            opacity: 0;
+            transform: translateY(20px);
+            box-shadow: 3px 3px 3px #15171ccf;
+        }
+
+        button.show
+        {
+            opacity: 1;
+            transform: translateY(0);
+            transition: all 2s ease;
+        }
+
+        .reset , .register
+        {
+            background: linear-gradient(45deg, #131425ed, #0a091aed);
+            color: #f3eded;
+        }
+
+        button:hover 
+        {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(8, 13, 41, 0.938);
+        }
+    </style>
+
+    <body>
+        <div class="grid-bg"></div>
+
+        <div class="registeration">
+            <h1 style="font-weight: normal;"><span>Registration Form</span></h1>
+            <hr style="width: 85%; margin: auto;  border:none; height:2px; background-color: #0f172a;"> <br>
+
+        <div class="form">
+           <form action="https://formsubmit.co/ambicacomputers23@gmail.com" method="POST">
+
+                <input type="hidden" name="_subject" value="New Student Registration">
+                <input type="hidden" name="_captcha" value="false">
+
+                <input type="text" name="name" placeholder="Enter your Name" required><br>
+
+                <input type="tel" name="mobile" placeholder="Enter your Mobile number" required><br>
+
+                <select name="qualification" required>
+                    <option disabled selected>Select the Qualification</option>
+                    <option value="SSC">SSC</option>
+                    <option value="HSC">HSC</option>
+                    <option value="DIPLOMA">DIPLOMA</option>
+                    <option value="GRADUATE">GRADUATE</option>
+                    <option value="POST-GRADUATE">POST-GRADUATE</option>
+                    <option value="OTHER">OTHER</option>
+                </select><br>
+
+                <select name="course" required>
+                    <option disabled selected>Select the Course</option>
+                    <option value="MS-CIT">MS-CIT</option>
+                    <option value="TYPING">TYPING</option>
+                    <option value="TALLY">TALLY</option>
+                    <option value="DTP">DTP</option>
+                    <option value="HARDWARE">HARDWARE</option>
+                </select>
+
+                <div class="language">
+                    <label style="text-align: left;">Typing Language:</label><br>
+                    <input style="margin-left: 50px;" type="radio" name="lang" value="English"> English
+                    <input type="radio" name="lang" value="Marathi"> Marathi
+                    <input type="radio" name="lang" value="Hindi"> Hindi<br>
+        
+                    <label style="text-align: left;">Typing Speed:</label><br>
+                    <input style="margin-left: 50px;" type="radio" name="speed" value="30 WPM"> 30 WPM
+                    <input type="radio" name="speed" value="40 WPM"> 40 WPM
+                    <input type="radio" name="speed" value="50 WPM"> 50 WPM
+                </div>
+
+                <input type="email" name="email" placeholder="Enter your Email"><br>
+
+                <textarea name="address" placeholder="Enter your Address" rows="2" required></textarea>
+
+                <div class="button">
+                    <button type="reset" class="reset"><span>Reset</span></button>
+                    <button type="submit" class="register"><span>Register</span></button>
+                </div>
+
+            </form>
+        </div>
+        </div>
+    </body>
+</html>
+
+<script>
+const sections = document.querySelectorAll('button');
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+        }
+    });
+}, {
+    threshold: 0.2
+});
+
+sections.forEach(section => {
+    observer.observe(section);
+});
+</script>
